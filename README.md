@@ -30,7 +30,7 @@ To run the script, make sure you have the following software installed:
 
 Create a directory to store the script and the necessary assets:
 
-````bash
+```bash
 mkdir -p ~/scripts/Weekly-clamscan
 ```
 
