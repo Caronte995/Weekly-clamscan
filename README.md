@@ -20,7 +20,7 @@ This script automates a weekly scan of ClamAV on your system. It checks if a sca
 To run the script, make sure you have the following software installed:
 
 - **ClamAV**: The antivirus software to perform the scan.
-- Zenity**: For graphical notification dialog boxes.
+- **Zenity**: For graphical notification dialog boxes.
 - **libnotify-bin**: For sending desktop notifications.
 - **mpg123 (optional)**: For audio alerts when threats are detected.
 
