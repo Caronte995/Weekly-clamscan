@@ -38,7 +38,7 @@ mkdir -p ~/scripts/Weekly-clamscan
 
 Save the provided script in the directory you created. You can name it `clamav-weekly-scan.sh`. To make it executable, use the following command:
 
-````bash
+```bash
 chmod +x ~/scripts/Weekly-clamscan/clamav-weekly-scan.sh
 ```
 
@@ -75,7 +75,7 @@ To automate the scan to run every week, you can use `anacrontab`, which is usefu
 
 Run the following command to edit your anacrontab:
 
-````bash
+```bash
 sudo nano /etc/anacrontab
 ```
 
@@ -83,7 +83,7 @@ sudo nano /etc/anacrontab
 
 Add the following line to schedule the script to run every Monday at 3:00 AM:
 
-````bash
+```bash
 1 3 * * 1 ~/scripts/Weekly-clamscan/clamav-weekly-scan.sh
 ```
 
@@ -97,7 +97,7 @@ This configuration means:
 
 You can adjust the schedule according to your needs. For example, to run the scan every day at 2:00 AM, you could use:
 
-````bash
+```bash
 1 2 * * * ~/scripts/Weekly-clamscan/clamav-weekly-scan.sh
 ```
 
@@ -105,7 +105,7 @@ You can adjust the schedule according to your needs. For example, to run the sca
 
 Once the script is configured and scheduled, it will run automatically according to the schedule you defined in ``anacrontab`. You can also run it manually by running the script directly:
 
-````bash
+```bash
 ~/scripts/Weekly-clamscan/clamav-weekly-scan.sh
 ```
 
@@ -128,7 +128,7 @@ By default, the script scans your entire system starting from `/`. To change thi
 
 For example, to scan only your home directory:
 
-````bash
+```bash
 sudo clamscan -r -i -o --move=“$QUARANTINE_DIR” “$HOME” > “$LOGFILE” 2>&1
 ```
 
@@ -143,7 +143,7 @@ sudo clamscan -r -i -o --move=“$QUARANTINE_DIR” “$HOME” > “$LOGFILE”
 
 If ClamAV does not have the latest virus definitions, it may not work as expected. Be sure to update the definitions regularly:
 
-````bash
+```bash
 sudo freshclam
 ```
 
@@ -161,7 +161,7 @@ If the script does not play sound, check the following:
 - The sound files exist in the correct directory (`~/scripts/Weekly-clamscan/sounds/`).
 - You can manually test the sound files by running:
 
-````bash
+```bash
 mpg123 ~~/scripts/Weekly-clamscan/sounds/notification-sa.mp3
 ```
 
