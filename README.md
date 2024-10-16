@@ -103,7 +103,7 @@ You can adjust the schedule according to your needs. For example, to run the sca
 
 ## Usage
 
-Once the script is configured and scheduled, it will run automatically according to the schedule you defined in ``anacrontab`. You can also run it manually by running the script directly:
+Once the script is configured and scheduled, it will run automatically according to the schedule you defined in ``anacrontab``. You can also run it manually by running the script directly:
 
 ```bash
 ~/scripts/Weekly-clamscan/clamav-weekly-scan.sh
